@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="600">
     <Grid Background="LightBlue" x:Name="MainGrid">
-        <Grid x:Name="MainMenu">
+        <Grid x:Name="MainMenu" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="100"/>
@@ -41,6 +41,7 @@
             <Button Content="Połącz" Grid.Column="1" Width="70" Height="30" Click="Button_Click"/>
             <Button Content="Rozłącz" Grid.Column="1" Grid.Row="1" Width="70" Height="30" Click="Button_Click_1"/>
             <Button Content="X" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Width="70" Height="30" Click="Button_Click_2"/>
+            <Button Content="Return to main menu"  HorizontalAlignment="Left" Margin="10" VerticalAlignment="Center" Grid.Row="2" Width="120" Height="30" Click="ReturnToMenuButton_click"/>
         </Grid>
         <Grid x:Name="Choose" Visibility="Collapsed">
             <Grid.ColumnDefinitions>
@@ -48,8 +49,8 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Button Content="Join to server" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click"/>
-            <Button Content="Create server" Grid.Column="1" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Click_1"/>
-            <Button Background="Transparent" Content="Back to main menu" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="top" Click="Button_Click_3"/>
+            <Button Content="Create server" Grid.Column="1" Width="80" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" Click="CreateServerButton_click"/>
+            <Button Background="Transparent" Content="Back to main menu" Width="120" Height="40" HorizontalAlignment="Left" VerticalAlignment="top" Click="ReturnToMenuButton_click"/>
         </Grid>
         <Grid x:Name="Singleplayer" Visibility="Collapsed">
             

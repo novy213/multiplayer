@@ -26,7 +26,7 @@ namespace multiplayer
         Socket s;
         string field;
         public MainWindow()
-        {
+        {            
             InitializeComponent();
         }        
         public void start()
@@ -74,13 +74,22 @@ namespace multiplayer
             MainMenu.Visibility = Visibility.Collapsed;
             MultiSeverSetup.Visibility = Visibility.Collapsed;
             Choose.Visibility = Visibility.Visible;
+            Singleplayer.Visibility = Visibility.Collapsed;
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void ReturnToMenuButton_click(object sender, RoutedEventArgs e)
         {
             MainMenu.Visibility = Visibility.Visible;
             MultiSeverSetup.Visibility = Visibility.Collapsed;
             Choose.Visibility = Visibility.Collapsed;
+            Singleplayer.Visibility = Visibility.Collapsed;
+        }
+        private void CreateServerButton_click(object sender, RoutedEventArgs e)
+        {
+            MainMenu.Visibility = Visibility.Collapsed;
+            MultiSeverSetup.Visibility = Visibility.Visible;
+            Choose.Visibility = Visibility.Collapsed;
+            Singleplayer.Visibility = Visibility.Collapsed;
         }
     }
 }
